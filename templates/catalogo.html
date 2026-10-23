@@ -1,0 +1,31 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1>{{ titulo }}</h1>
+
+    <p>{{ mensaje }}</p>
+
+    <h4>Materiales disponibles</h4>
+
+    <ul>
+        <li>
+            <strong>Libros:</strong>
+            materiales de consulta para distintas materias.
+        </li>
+        <li>
+            <strong>Revistas:</strong>
+            publicaciones con artículos e información actualizada.
+        </li>
+        <li>
+            <strong>Tesis:</strong>
+            trabajos de investigación realizados por estudiantes.
+        </li>
+        <li>
+            <strong>Recursos digitales:</strong>
+            libros electrónicos y documentos en línea.
+        </li>
+    </ul>
+
+{% endblock %}

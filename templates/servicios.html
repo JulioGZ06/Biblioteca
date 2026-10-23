@@ -1,0 +1,32 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1>{{ titulo }}</h1>
+    <p>{{ mensaje }}</p>
+    <h4>Servicios de la biblioteca</h4>
+
+    <ul>
+        <li>
+            <strong>Préstamo de libros:</strong>
+            permite llevar libros a casa durante el periodo autorizado.
+        </li>
+
+        <li>
+            <strong>Consulta en sala:</strong>
+            espacio para leer, estudiar y trabajar.
+        </li>
+
+        <li>
+            <strong>Acceso a recursos digitales:</strong>
+            consulta de materiales electrónicos.
+        </li>
+
+        <li>
+            <strong>Orientación bibliográfica:</strong>
+            ayuda para encontrar libros e información confiable.
+        </li>
+    </ul>
+
+{% endblock %}
