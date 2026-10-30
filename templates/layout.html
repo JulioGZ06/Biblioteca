@@ -37,10 +37,10 @@
         </div>
     </nav>
 
-    <div class="container-fluid mt-4">
+    <main class="container-fluid mt-4 page {% block page_class %}{% endblock %}">
         {% block content %}
         {% endblock %}
-    </div>
+    </main>
 
 </body>
 </html>

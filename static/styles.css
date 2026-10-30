@@ -1,18 +1,22 @@
 :root {
-    --color-background: #f3f5f8;
-    --color-surface: #ffffff;
-    --color-text: #263445;
-    --color-muted: #64748b;
-    --color-primary: #244b70;
-    --color-primary-hover: #183854;
-    --color-border: #e2e8ef;
-    --color-soft: #f7f9fb;
-    --shadow-card: 0 12px 32px rgba(28, 45, 64, 0.06);
+    --color-background: #111016;
+    --color-surface: #211b27;
+    --color-nav: #100d14;
+    --color-text: #f1eaf2;
+    --color-muted: #c1b5c5;
+    --color-primary: #f97316;
+    --color-primary-hover: #ffb15c;
+    --color-border: #403447;
+    --color-soft: #2a2330;
+    --shadow-card: 0 18px 48px rgba(0, 0, 0, 0.38), 0 0 34px rgba(116, 48, 145, 0.1);
 }
 
 body {
     margin: 0;
-    background: var(--color-background);
+    background:
+        radial-gradient(ellipse at 14% 12%, rgba(111, 54, 140, 0.24), transparent 30rem),
+        radial-gradient(ellipse at 88% 2%, rgba(249, 115, 22, 0.15), transparent 25rem),
+        var(--color-background);
     color: var(--color-text);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     line-height: 1.7;
@@ -25,14 +29,14 @@ body {
     justify-content: space-between;
     gap: 0.75rem 2rem;
     padding: 1rem max(1.5rem, calc((100% - 1040px) / 2)) !important;
-    background: var(--color-surface) !important;
-    border-bottom: 1px solid var(--color-border);
-    box-shadow: 0 2px 8px rgba(28, 45, 64, 0.03);
+    background: var(--color-nav) !important;
+    border-bottom: 3px solid var(--color-primary);
+    box-shadow: 0 5px 24px rgba(0, 0, 0, 0.38);
 }
 
 .navbar-brand {
     margin-right: 1rem;
-    color: var(--color-primary) !important;
+    color: #ffad5c !important;
     font-size: 1.05rem;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -47,7 +51,7 @@ body {
 .navbar-nav .nav-item.nav-link {
     padding: 0.45rem 0.8rem;
     border-radius: 6px;
-    color: var(--color-muted) !important;
+    color: #d6cadb !important;
     font-size: 0.9rem;
     font-weight: 500;
     transition: background-color 160ms ease, color 160ms ease;
@@ -55,8 +59,8 @@ body {
 
 .navbar-nav .nav-item.nav-link:hover,
 .navbar-nav .nav-item.nav-link:focus {
-    background: var(--color-soft);
-    color: var(--color-primary-hover) !important;
+    background: rgba(255, 255, 255, 0.09);
+    color: #ffffff !important;
 }
 
 .container-fluid {
@@ -65,18 +69,39 @@ body {
     margin: 2.5rem auto 3rem !important;
     padding: 2.75rem 3rem !important;
     border: 1px solid var(--color-border);
+    border-top: 3px solid var(--page-accent, var(--color-primary));
     border-radius: 12px;
-    background: var(--color-surface);
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(117, 69, 133, 0.14), transparent 24rem),
+        var(--color-surface);
     box-shadow: var(--shadow-card);
+}
+
+.page--home {
+    --page-accent: #ff8a24;
+}
+
+.page--catalog {
+    --page-accent: #bd83df;
+}
+
+.page--services {
+    --page-accent: #a5b979;
+}
+
+.page--contact {
+    --page-accent: #ff966b;
 }
 
 h1 {
     margin: 0 0 0.55rem;
-    color: var(--color-primary-hover);
+    color: #ffe4c2;
     font-size: clamp(1.9rem, 4vw, 2.35rem);
     font-weight: 700;
     letter-spacing: -0.04em;
     line-height: 1.2;
+    padding-left: 0.85rem;
+    border-left: 4px solid var(--page-accent, var(--color-primary));
 }
 
 h3 {
@@ -98,7 +123,7 @@ h4 {
     margin: 2.25rem 0 1rem;
     padding-bottom: 0.65rem;
     border-bottom: 1px solid var(--color-border);
-    color: var(--color-primary-hover);
+    color: #ffd5a1;
     font-size: 1.08rem;
     font-weight: 650;
     letter-spacing: -0.015em;
@@ -109,8 +134,8 @@ h4::after {
     bottom: -1px;
     left: 0;
     width: 2.5rem;
-    height: 2px;
-    background: var(--color-primary);
+    height: 3px;
+    background: var(--page-accent, var(--color-primary));
     content: "";
 }
 
@@ -139,7 +164,7 @@ li::before {
     width: 0.4rem;
     height: 0.4rem;
     border-radius: 50%;
-    background: var(--color-primary);
+    background: var(--page-accent, var(--color-primary));
     content: "";
 }
 
