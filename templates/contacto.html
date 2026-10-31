@@ -11,20 +11,47 @@
 
     <h4>Información de contacto</h4>
 
-    <p>
-        <strong>Dirección:</strong>
-        Boulevard Torres Oriente, Cto. Juan José Torres Landa 1901, El Tlacuache, 37500 León de los Aldama, Gto..
-    </p>
+    <div class="row row-cols-1 row-cols-md-3 contact-cards">
+        <div class="col mb-4">
+            <article class="card contact-card h-100">
+                <img src="{{ url_for('static', filename='img/contacto/contacto-direccion.png') }}" class="card-img-top contact-card-image" alt="Mapa nocturno que señala la ubicación de la biblioteca">
+                <div class="card-body">
+                    <h5 class="card-title">Dirección</h5>
+                    <p class="card-text">Boulevard Torres Oriente, Cto. Juan José Torres Landa 1901, El Tlacuache, 37500 León de los Aldama, Gto.</p>
+                </div>
+            </article>
+        </div>
 
-    <p>
-        <strong>Correo electrónico:</strong>
-        biblioteca@universidad-UDL.edu.mx
-    </p>
+        <div class="col mb-4">
+            <article class="card contact-card h-100">
+                <img src="{{ url_for('static', filename='img/contacto/contacto-correo.png') }}" class="card-img-top contact-card-image" alt="Sobre con un mensaje en una biblioteca">
+                <div class="card-body">
+                    <h5 class="card-title">Correo electrónico</h5>
+                    <p class="card-text"><a href="mailto:biblioteca@universidad-UDL.edu.mx">biblioteca@universidad-UDL.edu.mx</a></p>
+                </div>
+            </article>
+        </div>
 
-    <p>
-        <strong>Horario:</strong>
-        Lunes a viernes, de 8:00 a.m. a 6:00 p.m.
-    </p>
+        <div class="col mb-4">
+            <article class="card contact-card h-100">
+                <img src="{{ url_for('static', filename='img/contacto/contacto-horario-semana.png') }}" class="card-img-top contact-card-image" alt="Reloj junto a una vela para representar el horario entre semana">
+                <div class="card-body">
+                    <h5 class="card-title">Lunes a viernes</h5>
+                    <p class="card-text">De 8:00 a.m. a 6:00 p.m.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="col mb-4">
+            <article class="card contact-card h-100">
+                <img src="{{ url_for('static', filename='img/contacto/contacto-horario-sabado.png') }}" class="card-img-top contact-card-image" alt="Calendario con una calabaza para representar el horario del sábado">
+                <div class="card-body">
+                    <h5 class="card-title">Sábados</h5>
+                    <p class="card-text">De 9:00 a.m. a 1:00 p.m.</p>
+                </div>
+            </article>
+        </div>
+    </div>
 
 
 {% endblock %}

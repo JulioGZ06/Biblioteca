@@ -9,6 +9,51 @@
 
     <p>{{ mensaje }}</p>
 
+    <div id="catalogoCarrusel" class="carousel slide catalog-carousel" data-ride="carousel" aria-label="Materiales destacados">
+        <ol class="carousel-indicators">
+            <li data-target="#catalogoCarrusel" data-slide-to="0" class="active" aria-label="Libros"></li>
+            <li data-target="#catalogoCarrusel" data-slide-to="1" aria-label="Revistas"></li>
+            <li data-target="#catalogoCarrusel" data-slide-to="2" aria-label="Recursos digitales"></li>
+            <li data-target="#catalogoCarrusel" data-slide-to="3" aria-label="Tesis"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename='img/catalogo/libros.png') }}" class="d-block w-100 catalog-slide-image" alt="Libros antiguos abiertos en una biblioteca iluminada por una calabaza">
+                <div class="carousel-caption">
+                    <h5>Libros para descubrir</h5>
+                    <p>Encuentra tu próxima gran historia.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/catalogo/revistas.png') }}" class="d-block w-100 catalog-slide-image" alt="Revistas y publicaciones bajo la luz de una vela">
+                <div class="carousel-caption">
+                    <h5>Revistas y publicaciones</h5>
+                    <p>Ideas interesantes que salen de las sombras.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/catalogo/recursos-digitales.png') }}" class="d-block w-100 catalog-slide-image" alt="Libro digital abierto en una pantalla entre estantes">
+                <div class="carousel-caption">
+                    <h5>Recursos digitales</h5>
+                    <p>Explora conocimiento desde cualquier lugar.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename='img/catalogo/tesis.png') }}" class="d-block w-100 catalog-slide-image" alt="Tesis con birrete en una biblioteca iluminada por una vela">
+                <div class="carousel-caption">
+                    <h5>Tesis e investigación</h5>
+                    <p>Descubre investigaciones que dejan huella.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#catalogoCarrusel" role="button" data-slide="prev" aria-label="Anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#catalogoCarrusel" role="button" data-slide="next" aria-label="Siguiente">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+
     <h4>Materiales disponibles</h4>
 
     <ul>
@@ -30,4 +75,11 @@
         </li>
     </ul>
 
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 {% endblock %}

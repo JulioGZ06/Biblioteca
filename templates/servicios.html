@@ -9,26 +9,50 @@
     <p>{{ mensaje }}</p>
     <h4>Servicios de la biblioteca</h4>
 
-    <ul>
-        <li>
-            <strong>Préstamo de libros:</strong>
-            permite llevar libros a casa durante el periodo autorizado.
-        </li>
+    <div class="row service-cards">
+        <div class="col-md-6 mb-4">
+            <article class="card service-card h-100">
+                <img src="{{ url_for('static', filename='img/servicios/prestamo.png') }}" class="card-img-top service-card-image" alt="Libro abierto y birrete en la biblioteca">
+                <div class="card-body">
+                    <h5 class="card-title">Préstamo de libros</h5>
+                    <p class="card-text">Lleva libros a casa y disfruta de tus lecturas durante el periodo autorizado.</p>
+                    <a href="{{ url_for('catalogo') }}" class="btn btn-primary mt-auto">Explorar catálogo</a>
+                </div>
+            </article>
+        </div>
 
-        <li>
-            <strong>Consulta en sala:</strong>
-            espacio para leer, estudiar y trabajar.
-        </li>
+        <div class="col-md-6 mb-4">
+            <article class="card service-card h-100">
+                <img src="{{ url_for('static', filename='img/servicios/consulta-sala.png') }}" class="card-img-top service-card-image" alt="Espacio de lectura iluminado por una vela">
+                <div class="card-body">
+                    <h5 class="card-title">Consulta en sala</h5>
+                    <p class="card-text">Encuentra un espacio tranquilo para leer, estudiar y trabajar en la biblioteca.</p>
+                    <a href="{{ url_for('contacto') }}" class="btn btn-primary mt-auto">Consultar horarios</a>
+                </div>
+            </article>
+        </div>
 
-        <li>
-            <strong>Acceso a recursos digitales:</strong>
-            consulta de materiales electrónicos.
-        </li>
+        <div class="col-md-6 mb-4">
+            <article class="card service-card h-100">
+                <img src="{{ url_for('static', filename='img/servicios/recursos-digitales.png') }}" class="card-img-top service-card-image" alt="Libro electrónico abierto en una computadora portátil">
+                <div class="card-body">
+                    <h5 class="card-title">Recursos digitales</h5>
+                    <p class="card-text">Consulta libros electrónicos y otros materiales digitales desde cualquier lugar.</p>
+                    <a href="{{ url_for('catalogo') }}" class="btn btn-primary mt-auto">Ver materiales</a>
+                </div>
+            </article>
+        </div>
 
-        <li>
-            <strong>Orientación bibliográfica:</strong>
-            ayuda para encontrar libros e información confiable.
-        </li>
-    </ul>
+        <div class="col-md-6 mb-4">
+            <article class="card service-card h-100">
+                <img src="{{ url_for('static', filename='img/servicios/orientacion.png') }}" class="card-img-top service-card-image" alt="Lupa sobre un libro abierto para buscar información">
+                <div class="card-body">
+                    <h5 class="card-title">Orientación bibliográfica</h5>
+                    <p class="card-text">Recibe ayuda para encontrar libros y localizar información confiable para tus trabajos.</p>
+                    <a href="{{ url_for('contacto') }}" class="btn btn-primary mt-auto">Solicitar información</a>
+                </div>
+            </article>
+        </div>
+    </div>
 
 {% endblock %}

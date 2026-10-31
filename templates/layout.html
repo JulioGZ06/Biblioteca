@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ titulo }} - Biblioteca Universitaria</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}" type="image/png" />
+
 
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
@@ -13,8 +15,17 @@
 </head>
 <body>
 
+    <div class="spider-background" aria-hidden="true">
+        <span class="walking-spider walking-spider--one">🕷️</span>
+        <span class="walking-spider walking-spider--two">🕷️</span>
+        <span class="walking-spider walking-spider--three">🕷️</span>
+        <span class="walking-spider walking-spider--four">🕷️</span>
+        <span class="walking-spider walking-spider--five">🕷️</span>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="{{ url_for('inicio') }}">
+            <span aria-hidden="true">🎃</span>
             Biblioteca Universitaria
         </a>
 
@@ -38,9 +49,17 @@
     </nav>
 
     <main class="container-fluid mt-4 page {% block page_class %}{% endblock %}">
+        <div class="halloween-decorations" aria-hidden="true">
+            <span class="halloween-web">🕸️</span>
+            <span class="halloween-bats">🦇 🦇</span>
+            <span class="halloween-pumpkin">🎃</span>
+            <span class="halloween-ghost">👻</span>
+            <span class="halloween-skull">💀</span>
+        </div>
         {% block content %}
         {% endblock %}
     </main>
 
+    {% block scripts %}{% endblock %}
 </body>
 </html>
